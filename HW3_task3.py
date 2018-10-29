@@ -1,8 +1,7 @@
-ab = int(input("ab: "))
-bcca = int(input("bc=ca :"))
-for zvezda_ab in range(ab):
-    for zvezda_bcca in range(bcca):
-        for zvezda_bcca in range(bcca):
-            print('* ')
+n = int(input('введите число '))
+for a in range(0, n):
+    for b in range (0, n-a-1):
+        print(end='')
+    for b in range(0, a+1):
+        print('*', end='')
     print()
-
