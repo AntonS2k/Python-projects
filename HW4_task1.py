@@ -3,24 +3,12 @@
 
 
 
-#1 variant
-# def hello(name):
-#     if name:
-#         name = str(input('enter your name please '))
-#         print('Hello, ', name, '!')
-#     else:
-#         return
-# hello('Hello, Anton')
 
-
-
-
-
-#2 variant
-def hello(name):
-    if not name:
-        return
-        print('Hello, Anton!')
+def hello():
+    name = str(input('enter your name please '))
+    if name:
+        print('Hello, ', name, '!')
     else:
-        name = str(input('enter your name please ')
-hello ('Hello, ', name, '!')
+        print('Hello Anton')
+        return
+hello()
