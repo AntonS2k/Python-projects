@@ -43,7 +43,7 @@ def main():
                 print('Result:',res)
             elif res == 0:
                 print ('Result: 0')
-            # elif oper == m.cos:
+            # elif oper == 'cos':
             #     print('Cosine:', m.cos(x))
         except (ValueError, KeyError) as error:
             print("Please type valid data")
