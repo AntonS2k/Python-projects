@@ -38,7 +38,7 @@ def main():
             x = float(input('>> '))
             y = float(input('>> '))
             oper  = input('Operation is: ')
-            res = MATH_OPERATION[oper](x , y) or MATH_OPERATION[oper](x)
+            res = MATH_OPERATION[oper](x , y)
             if res:
                 print('Result:',res)
             elif res == 0:
