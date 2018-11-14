@@ -8,18 +8,14 @@ def mul (a, b):
     return a*b
 
 def div (a, b):
-    loop = True
-    while loop:
+    while True:
         try:
             print('Result:', a / b)
-            loop = True
+            break
         except (ValueError, ZeroDivisionError) as error:
             print('Error:', error)
             print('Please try again')
-            print()
-            loop = False
-
-
+            break
 
 import math as m
 
