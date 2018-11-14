@@ -1,3 +1,6 @@
+# def cos (a):
+#     return math.cos(a)
+
 def add(a , b):
     return a + b
 
@@ -26,8 +29,8 @@ MATH_OPERATION = {
     '/': div,
     'log': m.log,
     '**': pow,
-    'cos': m.cos
-}
+    # 'cos': m.cos,
+    }
 
 def main():
     while True:
@@ -39,7 +42,9 @@ def main():
             if res:
                 print('Result:',res)
             elif res == 0:
-                    print ('Result: 0')
+                print ('Result: 0')
+            # elif oper == m.cos:
+            #     print('Cosine:', m.cos(x))
         except (ValueError, KeyError) as error:
             print("Please type valid data")
 main()
