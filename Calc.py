@@ -25,6 +25,8 @@ MATH_OPERATION = {
     '*': mul,
     '/': div,
     'log': m.log,
+    '**': pow,
+    'cos': m.cos
 }
 
 def main():
@@ -33,11 +35,11 @@ def main():
             x = float(input('>> '))
             y = float(input('>> '))
             oper  = input('Operation is: ')
-            res = MATH_OPERATION[oper](x , y)
+            res = MATH_OPERATION[oper](x , y) or MATH_OPERATION[oper](x)
             if res:
                 print('Result:',res)
             elif res == 0:
                     print ('Result: 0')
-        except ValueError:
+        except (ValueError, KeyError) as error:
             print("Please type valid data")
 main()
