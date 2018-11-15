@@ -17,8 +17,6 @@ def div (a, b):
             print('Please try again')
             break
 
-def cos (a):
-    return math.cos(a)
 
 import math as m
 
@@ -64,5 +62,5 @@ def trig():
         except (ValueError, KeyError) as error:
             print("Please type valid data")
 
-math()
+# math()
 trig()
