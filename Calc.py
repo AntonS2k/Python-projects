@@ -37,32 +37,22 @@ MATH_OPERATION = {
     }
 
 
-# def main():
-#     while True:
-#         try:
-#             x = float(input('>> '))
-#             y = float(input('>> '))
-#             oper  = input('Operation is: ')
-#             res = MATH_OPERATION[oper](x , y)
-#             if res:
-#                 print('Result:',res)
-#             elif res == 0:
-#                 print ('Result: 0')
-#         except (ValueError, KeyError) as error:
-#             print("Please type valid data")
-# main()
-
-
-def trig():
+def main():
     while True:
         try:
             x = float(input('>> '))
+            y = float(input('>> '))
+            oper = input('Operation is: ')
+            res = MATH_OPERATION[oper](x , y)
+            x = float(input('>> '))
             trig_func = input('trigonometric function is: ')
             res_trig = TRIG_OPERATION[trig_func](x)
-            if res_trig:
-                print('Result:',res_trig)
-            elif res_trig == 0:
+            if res and res_trig:
+                print('Result:',res)
+                print('Result:', res_trig)
+            elif res == 0 and res_trig==0 :
                 print ('Result: 0')
         except (ValueError, KeyError) as error:
             print("Please type valid data")
-trig()
+
+main()
