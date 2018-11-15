@@ -1,6 +1,3 @@
-# def cos (a):
-#     return math.cos(a)
-
 def add(a , b):
     return a + b
 
@@ -20,7 +17,15 @@ def div (a, b):
             print('Please try again')
             break
 
+def cos (a):
+    return math.cos(a)
+
 import math as m
+
+TRIG_OPERATION = {
+    'cos': m.cos,
+    'sin': m.sin,
+    }
 
 MATH_OPERATION = {
     '+': add,
@@ -29,22 +34,35 @@ MATH_OPERATION = {
     '/': div,
     'log': m.log,
     '**': pow,
-    # 'cos': m.cos,
     }
 
-def main():
+
+# def main():
+#     while True:
+#         try:
+#             x = float(input('>> '))
+#             y = float(input('>> '))
+#             oper  = input('Operation is: ')
+#             res = MATH_OPERATION[oper](x , y)
+#             if res:
+#                 print('Result:',res)
+#             elif res == 0:
+#                 print ('Result: 0')
+#         except (ValueError, KeyError) as error:
+#             print("Please type valid data")
+# main()
+
+
+def trig():
     while True:
         try:
             x = float(input('>> '))
-            y = float(input('>> '))
-            oper  = input('Operation is: ')
-            res = MATH_OPERATION[oper](x , y)
-            if res:
-                print('Result:',res)
-            elif res == 0:
+            trig_func = input('trigonometric function is: ')
+            res_trig = TRIG_OPERATION[trig_func](x)
+            if res_trig:
+                print('Result:',res_trig)
+            elif res_trig == 0:
                 print ('Result: 0')
-            # elif oper == 'cos':
-            #     print('Cosine:', m.cos(x))
         except (ValueError, KeyError) as error:
             print("Please type valid data")
-main()
+trig()
